@@ -27,13 +27,14 @@ check_connectivity () {
 main () {
 	check_connectivity
 	connection=$(echo $return)
+	specific_time="1200"
 
 	if [[ "$connection" == "1" ]]; then
 		time=$(date '+%H%M')
-		if [[ "$time" == "1200" ]]; then
+		if [[ "$time" == "$specific_time" ]]; then
 			set_photo
 		else
-			if [[ "$time" > "1200" ]]; then
+			if [[ "$time" > "$specific_time" ]]; then
 				datum=$(cat datums | tail -1)
 				if [[ "$datum" != "$(date '+%y-%d-%m')" ]]; then
 					set_photo
