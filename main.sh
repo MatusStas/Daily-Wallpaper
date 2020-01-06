@@ -11,7 +11,7 @@ set_photo () {
 
 	gsettings set org.gnome.desktop.background picture-options 'scaled'
 	gsettings set org.gnome.desktop.background picture-uri /home/matusstas/Projects/EveryDayWallpaper/wallpaper
-	echo $(date '+%y-%d-%m') >> datums
+	echo $(date '+%d-%m-%y') >> datums
 }
 
 check_connectivity () {
@@ -36,7 +36,7 @@ main () {
 		else
 			if [[ "$time" > "$specific_time" ]]; then
 				datum=$(cat datums | tail -1)
-				if [[ "$datum" != "$(date '+%y-%d-%m')" ]]; then
+				if [[ "$datum" != "$(date '+%d-%m-%y')" ]]; then
 					set_photo
 				fi
 			fi
