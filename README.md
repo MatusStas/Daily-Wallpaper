@@ -41,3 +41,12 @@ Write this command to crontab.
 ```
 
 5 * means that program will execute every minute. Clicking on this [Manual](https://crontab.guru/#*_*_*_*_*) will tell you how to operate with *
+
+
+## Setting up rights for main.py
+
+You need to give main.py file all rights for executing because of command you typed in cron table. Type this command in console.
+
+```bash
+chmod +x main.py
+```
