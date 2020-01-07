@@ -25,3 +25,19 @@ If you wanna different time for refreshing your wallpaper you can change it in f
 ```bash
 specific_time="YOUR_TIME"
 ```
+
+## Setting up cron
+
+Cron is service for scheduling tasks. Typing this command will open cron table.
+
+```bash
+crontab -e
+````
+
+Write this command to crontab.
+
+```bash
+* * * * * (cd /home/USERNAME/PATH_TO_PROJECT; ./main.sh)
+```
+
+5 * means that program will execute every minute. Clicking on this [Manual](https://crontab.guru/#*_*_*_*_*) will tell you how to operate with *
