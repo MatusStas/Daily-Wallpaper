@@ -10,7 +10,7 @@ set_photo () {
 	mv photo* wallpaper
 
 	gsettings set org.gnome.desktop.background picture-options 'scaled'
-	gsettings set org.gnome.desktop.background picture-uri /home/matusstas/Projects/EveryDayWallpaper/wallpaper
+	gsettings set org.gnome.desktop.background picture-uri /home/matusstas/PROJECTS/EveryDayWallpaper/wallpaper
 	echo $(date '+%d-%m-%y') >> datums
 }
 
